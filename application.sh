@@ -20,5 +20,5 @@ APPLICATIONS_ARRAY=(
 )
 
 for APPLICATION in "${APPLICATIONS_ARRAY[@]}"; do
-	brew cask install "${APPLICATION}"
+	brew install --cask "${APPLICATION}"
 done
