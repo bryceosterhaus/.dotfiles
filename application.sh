@@ -16,7 +16,7 @@ APPLICATIONS_ARRAY=(
 	"sublime-merge"
 	"visual-studio-code"
 	"intellij-idea"
-	"obsidian
+	"obsidian"
 )
 
 for APPLICATION in "${APPLICATIONS_ARRAY[@]}"; do

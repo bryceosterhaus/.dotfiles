@@ -15,6 +15,7 @@ brew install coreutils
 # Install Fish Shell
 brew install fish
 fish
+fish_add_path /opt/homebrew/bin
 echo $(command -s fish) | sudo tee -a /etc/shells
 chsh -s $(command -s fish)
 
