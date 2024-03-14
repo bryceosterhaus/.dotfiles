@@ -44,11 +44,11 @@ if status is-interactive
 
 
     set -xg EDITOR "nano"
-    set -xg JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home
+    set -xg JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
     set -xg ANT_OPTS "-Xmx4096m -Xmx4096m"
     set -xg GRADLE_OPTS "-Xmx4096m"
 
-    fish_add_path --global /opt/gradle/gradle-3.5/bin
+    fish_add_path --global /opt/homebrew/bin/gradle
     fish_add_path --global /Library/PackageManager/bin
 
     # Aliases

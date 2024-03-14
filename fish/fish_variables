@@ -14,6 +14,8 @@ SETUVAR _fisher_patrickf1_2F_fzf_2E_fish_files:\x7e/\x2econfig/fish/functions/_f
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/hydro\x1ejethrokuan/z\x1epatrickf1/fzf\x2efish\x1edracula/fish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _hydro_git_15365:heads/fix\x2dpack\x2dfix\x2d256833567\x1b\x5b31m\x20\u2718\x20
+SETUVAR _hydro_git_23096:master\x20
+SETUVAR _hydro_git_24026:master\x1b\x5b31m\x20\u2718\x20
 SETUVAR _hydro_git_3754:\x1d
 SETUVAR _hydro_git_39510:LPD\x2d17434\x20
 SETUVAR _hydro_git_54860:LPD\x2d17930\x20
@@ -56,4 +58,5 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3d44475a
 SETUVAR fish_pager_color_selected_completion:f8f8f2
 SETUVAR fish_pager_color_selected_description:6272a4
 SETUVAR fish_pager_color_selected_prefix:8be9fd
+SETUVAR fish_user_paths:/opt/homebrew/bin
 SETUVAR hydro_color_pwd:brblue
