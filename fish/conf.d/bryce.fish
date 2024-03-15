@@ -26,22 +26,10 @@ function ij
 	/Users/bryceosterhaus/repos/liferay-intellij/intellij "$argv"
 end
 
+set --global fish_prompt_pwd_dir_length 3
+
 if status is-interactive
     cd ~/repos
-
-    # Commands to run in interactive sessions can go here
-    set --global fish_prompt_pwd_dir_length 0
-
-    # set --global hydro_multiline true
-    set --global hydro_color_pwd FFB86C
-    set --global hydro_color_git 8BE9FD
-    set --global hydro_color_error FF5555
-    set --global hydro_color_prompt 50FA7B
-    set --global hydro_color_duration purple
-    set --global hydro_symbol_git_dirty (set_color red; echo " ✘")
-    set --global hydro_symbol_git_ahead
-    set --global hydro_symbol_git_behind
-
 
     set -xg EDITOR "nano"
     set -xg JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
@@ -64,6 +52,7 @@ if status is-interactive
     abbr -a glg 'git log --color --graph --pretty="format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
     abbr -a gpo 'git push origin'
     abbr -a gpru 'git pull --rebase upstream'
+    abbr -a gst 'git status'
     abbr -a npr "npm run"
     abbr -a past 'node /Users/bryceosterhaus/repos/select-branch-cli/index.js'
     abbr -a r-abort 'git rebase --abort'
@@ -78,4 +67,45 @@ if status is-interactive
     abbr -a macsleep "pmset sleepnow"
 
     abbr -a fzhelp _fzf_configure_bindings_help
+end
+
+function fish_prompt
+    set_color FFB86C # orange
+    echo -n (prompt_pwd)
+    set_color 8BE9FD # cyan
+
+    # Check if we're in a Git repository
+    if git rev-parse --is-inside-work-tree >/dev/null 2>&1
+        set_color $fish_color_git_branch
+        echo -n " ("(git rev-parse --abbrev-ref HEAD)")"
+    end
+
+    echo -n ' ❯ '
+end
+
+function fish_right_prompt
+    if git rev-parse --is-inside-work-tree >/dev/null 2>&1
+        set git_status (git status --porcelain)
+
+        # Check if the current branch is dirty
+        if echo "$git_status" | grep -q .
+            set untracked_files (echo "$git_status" | grep "??" | wc -l | string trim)
+
+            echo -n (set_color red; echo "(❌")
+
+            if test $untracked_files -gt 0
+                echo " "
+                echo $untracked_files
+            end
+            echo -n ")"
+        else
+            echo -n (set_color green; echo "(✅)")
+        end
+        set_color normal
+    end
+    echo (set_color 88f)
+end
+
+function fish_right_prompt_loading_indicator
+    echo (set_color '#aaa')'(…)'(set_color normal)
 end
