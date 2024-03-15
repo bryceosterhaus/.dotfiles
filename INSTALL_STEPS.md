@@ -31,16 +31,22 @@ bash ./repos.sh
 # Install Applications
 bash ./applications.sh
 
-# Install Node
-brew install node
-
 # Node manager
-npm install -g n
+brew install n
+
 ## make cache folder (if missing) and take ownership
 sudo mkdir -p /usr/local/n
 sudo chown -R $(whoami) /usr/local/n
-## take ownership of node install destination folders
+## make sure the required folders exist (safe to execute even if they already exist)
+sudo mkdir -p /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+## take ownership of Node.js install destination folders
 sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+## install latest node
+n latest
+### Verify
+which node
+which npm
+which npx
 
 # Install Liferay Stuff
 ## Java
@@ -49,6 +55,10 @@ sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/lo
 ## ant and gradle
 brew install ant
 brew install gradle
+
+## gw
+brew tap gdubw/gng
+brew install gng
 
 # Symlink Configs
 bash symlinks.sh
