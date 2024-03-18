@@ -1,13 +1,7 @@
 {
 "Profiles": [
 {
-  "Link Color" : {
-    "Red Component" : 0,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.73422706127166748,
-    "Alpha Component" : 1,
-    "Green Component" : 0.35915297269821167
-  },
+  "Use Non-ASCII Font" : false,
   "Tags" : [
 
   ],
@@ -16,28 +10,34 @@
     "Red Component" : 0.3333333432674408,
     "Blue Component" : 1
   },
-  "Ansi 7 Color" : {
+  "Ansi 6 Color" : {
     "Green Component" : 0.73333334922790527,
-    "Red Component" : 0.73333334922790527,
+    "Red Component" : 0,
     "Blue Component" : 0.73333334922790527
   },
-  "Ansi 8 Color" : {
-    "Green Component" : 0.3333333432674408,
-    "Red Component" : 0.3333333432674408,
-    "Blue Component" : 0.3333333432674408
-  },
+  "Normal Font" : "Monaco 12",
   "Bold Color" : {
     "Green Component" : 1,
     "Red Component" : 1,
     "Blue Component" : 1
   },
-  "Ansi 9 Color" : {
-    "Green Component" : 0.3333333432674408,
-    "Red Component" : 1,
-    "Blue Component" : 0.3333333432674408
+  "Link Color" : {
+    "Red Component" : 0,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.73422706127166748,
+    "Alpha Component" : 1,
+    "Green Component" : 0.35915297269821167
   },
-  "Guid" : "3C79FE0E-48DC-4111-A3BD-455A1826BAF8",
-  "Horizontal Spacing" : 1,
+  "Ansi 1 Color" : {
+    "Green Component" : 0,
+    "Red Component" : 0.73333334922790527,
+    "Blue Component" : 0
+  },
+  "Ansi 2 Color" : {
+    "Green Component" : 0.73333334922790527,
+    "Red Component" : 0,
+    "Blue Component" : 0
+  },
   "Rows" : 25,
   "Default Bookmark" : "No",
   "Cursor Guide Color" : {
@@ -78,7 +78,7 @@
   "Sync Title" : false,
   "Prompt Before Closing 2" : false,
   "BM Growl" : true,
-  "Command" : "\/usr\/local\/bin\/fish",
+  "Command" : "\/opt\/homebrew\/bin\/fish",
   "Description" : "Default",
   "Mouse Reporting" : true,
   "Screen" : -1,
@@ -366,10 +366,11 @@
   },
   "Window Type" : 0,
   "Semantic History" : {
-    "action" : "editor",
     "text" : "",
+    "action" : "editor",
     "editor" : "com.microsoft.VSCode"
   },
+  "Initial Text" : "",
   "Background Image Location" : "",
   "Blur" : false,
   "Badge Color" : {
@@ -403,17 +404,13 @@
     "Red Component" : 0.73333334922790527,
     "Blue Component" : 0.73333334922790527
   },
-  "Transparency" : 0,
-  "Ansi 1 Color" : {
+  "Ansi 0 Color" : {
     "Green Component" : 0,
-    "Red Component" : 0.73333334922790527,
-    "Blue Component" : 0
-  },
-  "Ansi 2 Color" : {
-    "Green Component" : 0.73333334922790527,
     "Red Component" : 0,
     "Blue Component" : 0
   },
+  "Transparency" : 0,
+  "Custom Directory" : "No",
   "Ansi 3 Color" : {
     "Green Component" : 0.73333334922790527,
     "Red Component" : 0.73333334922790527,
@@ -429,19 +426,23 @@
     "Red Component" : 0.73333334922790527,
     "Blue Component" : 0.73333334922790527
   },
-  "Use Non-ASCII Font" : false,
-  "Ansi 6 Color" : {
+  "Guid" : "3C79FE0E-48DC-4111-A3BD-455A1826BAF8",
+  "Ansi 7 Color" : {
     "Green Component" : 0.73333334922790527,
-    "Red Component" : 0,
+    "Red Component" : 0.73333334922790527,
     "Blue Component" : 0.73333334922790527
   },
-  "Normal Font" : "Monaco 12",
-  "Ansi 0 Color" : {
-    "Green Component" : 0,
-    "Red Component" : 0,
-    "Blue Component" : 0
+  "Ansi 8 Color" : {
+    "Green Component" : 0.3333333432674408,
+    "Red Component" : 0.3333333432674408,
+    "Blue Component" : 0.3333333432674408
   },
-  "Custom Directory" : "No",
+  "Ansi 9 Color" : {
+    "Green Component" : 0.3333333432674408,
+    "Red Component" : 1,
+    "Blue Component" : 0.3333333432674408
+  },
+  "Horizontal Spacing" : 1,
   "Right Option Key Sends" : 2
 },
 {
@@ -842,8 +843,8 @@
     "Green Component" : 0.14910027384757996
   },
   "Semantic History" : {
-    "action" : "editor",
     "text" : "",
+    "action" : "editor",
     "editor" : "com.microsoft.VSCode"
   },
   "Ambiguous Double Width" : false,
@@ -854,7 +855,7 @@
     "Blue Component" : 0
   },
   "Blur" : true,
-  "Normal Font" : "Monaco 12",
+  "Normal Font" : "Hack-Regular 12",
   "Vertical Spacing" : 1,
   "Ansi 7 Color" : {
     "Green Component" : 0.73333334922790527,
@@ -864,7 +865,7 @@
   "Place Prompt at First Column" : true,
   "Space" : -1,
   "HotKey Window AutoHides" : true,
-  "Command" : "\/usr\/local\/bin\/fish",
+  "Command" : "\/opt\/homebrew\/bin\/fish",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 2,
