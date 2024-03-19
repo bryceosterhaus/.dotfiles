@@ -4,6 +4,7 @@ ln -s -f $(pwd)/iterm2/com.googlecode.iterm2.plist "${HOME}/Library/Preferences/
 
 # Git
 ln -s -f $(pwd)/git/.gitconfig ~/.gitconfig
+ln -s -f $(pwd)/git/..gitconfig.local ~/..gitconfig.local
 ln -s -f $(pwd)/git/.gitignore_global ~/.gitignore_global
 
 # Fish
