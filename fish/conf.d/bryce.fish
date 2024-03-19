@@ -35,6 +35,10 @@ if status is-interactive
     set -xg JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
     set -xg ANT_OPTS "-Xmx4096m -Xmx4096m"
     set -xg GRADLE_OPTS "-Xmx4096m"
+    set -xg LIFERAY_HOME /Users/bryceosterhaus/repos/bundles
+    set -xg LIFERAY_PORTAL_URL localhost:8080
+    set -xg PLAYWRIGHT_PROJECT_NAME portal
+    set -xg HOSTNAME localhost
 
     fish_add_path --global /opt/homebrew/bin/gradle
     fish_add_path --global /Library/PackageManager/bin
